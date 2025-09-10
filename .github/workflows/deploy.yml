@@ -21,7 +21,7 @@ jobs:
     - name: Install and Build
       run: |
         npm ci
-        npm run build -- --configuration production --base-href "/your-repo-name/"
+        npm run build -- --configuration production --base-href "/portfolio/"
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
