@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-snow-storm-2: #ECEFF4;
+  --color-polar-night-0: #2E3440;
+  --color-polar-night-1: #3B4252;
+  --color-frost-1: #88C0D0;
+  --color-frost-2: #5E81AC;
+  --font-jetBrains: "JetBrains Mono", monospace;
+}
+
+body {
+  background-color: var(--color-polar-night-0);
+  justify-content: center;
+  align-items: center;
+}
+
+.snow-filter {
+  --filter-invert: invert(97%) sepia(16%) saturate(498%) hue-rotate(176deg) brightness(99%) contrast(93%);
+  filter: var(--filter-invert);
+}
