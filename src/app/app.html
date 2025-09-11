@@ -2,24 +2,12 @@
   <div class="w-full max-w-4xl flex px-4 sm:px-6 lg:px-8 xl:px-10">
     <div class="w-full max-w-3xl mx-auto pt-2.5 sm:pt-1.5 lg:pt-3.5 h-full flex flex-col gap-8 sm:gap-12 lg:gap-24">
         <app-header></app-header>
-      <div class="bg-polar-night-1 font-jetBrains w-full  rounded-2xl px-6 py-4 space-y-2">
-        <app-profile-info></app-profile-info>
-        <div>
-          <div class="space-y-3.5">
-            <h2 class="text-2xl italic font-bold font-jetBrains text-frost-2">About Me</h2>
-            <p class="font-jetBrains text-sm text-snow-storm-2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore
-              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-              voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-
-          </div>
+      <div class="bg-polar-night-1 font-jetBrains w-full  rounded-2xl px-6 py-4 flex flex-col gap-14">
+        <div class="space-y-1.5">
+          <app-profile-info></app-profile-info>
+          <app-about-section></app-about-section>
         </div>
-
+        <app-skills></app-skills>
       </div>
 
     </div>

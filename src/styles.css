@@ -9,6 +9,8 @@
   --color-frost-1: #88C0D0;
   --color-frost-2: #5E81AC;
   --font-jetBrains: "JetBrains Mono", monospace;
+  --spacing-26: 1.625rem;
+
 }
 
 body {
@@ -18,6 +20,6 @@ body {
 }
 
 .snow-filter {
-  --filter-invert: invert(97%) sepia(16%) saturate(498%) hue-rotate(176deg) brightness(99%) contrast(93%);
+  --filter-invert:brightness(0) invert(97%) sepia(16%) saturate(498%) hue-rotate(176deg) brightness(99%) contrast(93%);
   filter: var(--filter-invert);
 }

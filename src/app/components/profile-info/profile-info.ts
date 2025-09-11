@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { SocialLinks } from '../social-links/social-links';
 
 @Component({
@@ -8,5 +8,6 @@ import { SocialLinks } from '../social-links/social-links';
   styleUrl: './profile-info.css'
 })
 export class ProfileInfo {
+  myName = signal("Ahmed Khalil Sfar")
 
 }
