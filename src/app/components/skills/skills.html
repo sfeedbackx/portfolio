@@ -5,14 +5,21 @@
 
 @for(tech of technologies; track tech.name) {
   <div
-    class="w-[6.25rem] h-20 gap-1.5 p-1.5 flex flex-col border-snow-storm-2 border rounded-lg justify-center items-center">
-    <img
-      [src]="tech.image"
-      [alt]="tech.alt"
-      [ngClass]="tech.size"
-      class="object-cover snow-filter transition  ease-in-out hover:-translate-y-1">
-          <div class ="text-snow-storm-2 font-jetBrains text-xs">{{tech.name}}</div>
-  </div>
+    class="w-[6.25rem] h-20 gap-1.5 p-1.5 flex flex-col border-snow-storm-2 border rounded-lg justify-center items-center"
+    (mouseenter)=onMouseEnter()
+        >
+
+            <img
+              [src]="tech.image"
+              [alt]="tech.alt"
+              [ngClass]="[tech.size, happen()?  tech.hoverColor : '']"
+              class="object-cover   transition snow-filter  ease-in-out hover:-translate-y-1
+              "
+              [class.expanded]= "happen()"
+              [class] = 'translation1()'
+          >
+            <div class ="text-snow-storm-2 font-jetBrains text-xs">{{tech.name}}</div>
+    </div>
 } @empty {
   <p class="text-snow-storm-2">No technologies to display</p>
 }
