@@ -5,7 +5,7 @@
 
 @for(tech of technologies; track tech.name) {
   <div
-    [ngClass]="tech.hoverColor || ''"
+    [class]="tech.hoverColor || ''"
     class="w-[6.25rem] h-20 gap-1.5 p-1.5 flex flex-col border-snow-storm-2 border rounded-lg justify-center items-center">
     <img
       [src]="tech.image"
