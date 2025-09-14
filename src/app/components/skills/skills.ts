@@ -14,7 +14,6 @@ interface Technology {
   styleUrl: './skills.css'
 })
 export class Skills {
-  happen = signal(false)
   technologiesTitle = signal("Technologies")
  technologies: Technology[] = [
     { name: 'Node.js', image: 'node-js.png', alt: 'node-js', size: 'w-7 h-7', hoverColor:"nodejs-filter" },
@@ -30,12 +29,6 @@ export class Skills {
     { name: 'MongoDB', image: 'mongoDB.png', alt: 'mongoDB', size: 'w-7 h-7',hoverColor:"mongodb-filter" },
     { name: 'PostgreSQL', image: 'postgresql.png', alt: 'postgresSQL', size: 'w-7 h-7', hoverColor:"postgress-filter" }
   ];
-  translation1 = signal("translate-y-1")
-   onMouseEnter() {
-    console.log("mouse enter");
-    this.happen.set(true)
-    console.log(`${this.happen.toString()}`);
-  }
 
 
 }

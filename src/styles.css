@@ -25,46 +25,59 @@ body {
   filter: var(--filter-invert);
 }
 .nodejs-filter:hover img{
+  transform: translate(0px, -0.25rem);
   --filter-hover:brightness(0) invert(38%) sepia(86%) saturate(354%) hue-rotate(71deg) brightness(97%) contrast(88%);
   filter: var(--filter-hover);
+
+
 }
-.springboot-filter:hover{
+.springboot-filter:hover img{
+  transform: translate(0px, -0.25rem);
   --filter-hover:brightness(0) invert(53%) sepia(85%) saturate(343%) hue-rotate(53deg) brightness(100%) contrast(84%);
   filter: var(--filter-hover);
 }
-.expressjs-filter:hover{
+.expressjs-filter:hover img{
+  transform: translate(0px, -0.25rem);
   --filter-hover:brightness(0) invert(69%) sepia(76%) saturate(336%) hue-rotate(12deg) brightness(107%) contrast(95%);
   filter: var(--filter-hover);
 }
-.angularjs-filter:hover{
+.angularjs-filter:hover img{
+  transform: translate(0px, -0.25rem);
   --filter-hover:brightness(0) invert(32%) sepia(39%) saturate(3158%) hue-rotate(339deg) brightness(80%) contrast(122%);
   filter: var(--filter-hover);
 }
-.nestjs-filter:hover{
+.nestjs-filter:hover img{
+  transform: translate(0px, -0.25rem);
   --filter-hover:brightness(0) invert(26%) sepia(64%) saturate(4966%) hue-rotate(337deg) brightness(94%) contrast(93%);
   filter: var(--filter-hover);
 }
-.docker-filter:hover{
+.docker-filter:hover img{
+  transform: translate(0px, -0.25rem);
   --filter-hover:brightness(0) invert(28%) sepia(32%) saturate(7500%) hue-rotate(216deg) brightness(97%) contrast(91%);
   filter: var(--filter-hover);
 }
-.react-filter:hover{
+.react-filter:hover img{
+  transform: translate(0px, -0.25rem);
   --filter-hover:brightness(0) invert(80%) sepia(13%) saturate(2105%) hue-rotate(158deg) brightness(100%) contrast(98%);
   filter: var(--filter-hover);
 }
-.linux-git-filter:hover{
+.linux-git-filter:hover img{
+  transform: translate(0px, -0.25rem);
   --filter-hover:brightness(0) invert(7%) sepia(1%) saturate(5149%) hue-rotate(201deg) brightness(88%) contrast(112%);
   filter: var(--filter-hover);
 }
-.tailwind-filter:hover{
+.tailwind-filter:hover img{
+  transform: translate(0px, -0.25rem);
   --filter-hover:brightness(0) invert(67%) sepia(49%) saturate(6169%) hue-rotate(151deg) brightness(97%) contrast(104%);
   filter: var(--filter-hover);
 }
-.mongodb-filter:hover{
+.mongodb-filter:hover img{
+  transform: translate(0px, -0.25rem);
   --filter-hover:brightness(0) invert(56%) sepia(58%) saturate(522%) hue-rotate(65deg) brightness(95%) contrast(89%);
   filter: var(--filter-hover);
 }
-.postgress-filter:hover{
+.postgress-filter:hover img{
+  transform: translate(0px, -0.25rem);
   --filter-hover:brightness(0) invert(35%) sepia(10%) saturate(4616%) hue-rotate(169deg) brightness(87%) contrast(71%);
   filter: var(--filter-hover);
 }
