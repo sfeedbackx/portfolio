@@ -29,6 +29,4 @@ export class Skills {
     { name: 'MongoDB', image: 'mongoDB.png', alt: 'mongoDB', size: 'w-7 h-7',hoverColor:"mongodb-filter" },
     { name: 'PostgreSQL', image: 'postgresql.png', alt: 'postgresSQL', size: 'w-7 h-7', hoverColor:"postgress-filter" }
   ];
-
-
 }
