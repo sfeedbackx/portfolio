@@ -4,12 +4,12 @@ import { Header } from "./components/header/header";
 import { ProfileInfo } from "./components/profile-info/profile-info";
 import { AboutSection } from "./components/about-section/about-section";
 import { Skills } from "./components/skills/skills";
-import { Interships } from "./components/interships/interships";
 import { Projects } from "./components/projects/projects";
+import { Internships } from "./components/internships/internships";
 
 @Component({
 	selector: "app-root",
-	imports: [RouterOutlet, Header, ProfileInfo, AboutSection, Skills,Interships,Projects],
+	imports: [RouterOutlet, Header, ProfileInfo, AboutSection, Skills,Internships,Projects],
 	templateUrl: "./app.html",
 	styleUrl: "./app.css",
 })
