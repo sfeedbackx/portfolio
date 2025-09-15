@@ -1,12 +1,13 @@
 <div>
   <div class="flex flex-col gap-5">
     <h2 class="text-2xl italic font-bold font-jetBrains text-frost-2">{{technologiesTitle()}}</h2>
-    <div class="flex flex-row gap-5 flex-wrap max-w-[43.75rem]">
+    <div class="flex flex-row gap-4 md:justify-between max-sm:gap-4 justify-start
+      max-md:gap-[2%] flex-wrap max-w-[43.75rem] ">
 
 @for(tech of technologies; track tech.name) {
   <div
     [class]="tech.hoverColor || ''"
-    class="w-[6.25rem] h-20 gap-1.5 p-1.5 flex flex-col border-snow-storm-2 border rounded-lg justify-center items-center">
+    class="w-[6rem] max-sm:w-[5.8906rem] h-20 gap-1.5 p-1.5 flex flex-col border-snow-storm-2 border rounded-lg justify-center items-center">
     <img
       [src]="tech.image"
       [alt]="tech.alt"
