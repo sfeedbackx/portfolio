@@ -81,3 +81,28 @@ body {
   --filter-hover:brightness(0) invert(35%) sepia(10%) saturate(4616%) hue-rotate(169deg) brightness(87%) contrast(71%);
   filter: var(--filter-hover);
 }
+.pic_card{
+  position: relative;
+  z-index: 0;
+}
+
+.pic_card::after, .pic_card::before{
+  content: '';
+  position: absolute;
+  background: var(--color-snow-storm-2);
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  padding: 44px;
+}
+.pic_card::before{
+  filter: blur(1.5rem);
+  opacity: 0.5;
+}
+.pic_card:hover::after , .pic_card:hover::before{
+  background: var(--color-frost-1);
+}
