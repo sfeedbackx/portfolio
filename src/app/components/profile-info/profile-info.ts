@@ -9,5 +9,14 @@ import { SocialLinks } from '../social-links/social-links';
 })
 export class ProfileInfo {
   myName = signal("Ahmed Khalil Sfar")
+ static isHovered = signal<boolean | null>(null)
+  togole(){
+    setTimeout(()=>{
+      ProfileInfo.isHovered.update((isHovered) => !isHovered)
+
+    },0)
+    console.log(ProfileInfo.isHovered)
+  }
+
 
 }
