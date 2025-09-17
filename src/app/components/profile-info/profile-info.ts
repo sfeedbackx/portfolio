@@ -14,8 +14,7 @@ export class ProfileInfo {
     setTimeout(()=>{
       ProfileInfo.isHovered.update((isHovered) => !isHovered)
 
-    },0)
-    console.log(ProfileInfo.isHovered)
+    },200)
   }
   getStatus(){
     return ProfileInfo.isHovered()
