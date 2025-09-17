@@ -1,6 +1,6 @@
 .highlight {
-  display: inline-block;
-  height: 75%;
+  display: inline;
+  vertical-align: baseline;
   padding: 0 0;
   animation-fill-mode: forwards;
   background-image: linear-gradient(to right,
@@ -29,8 +29,8 @@
 
 .highlight-left {
   padding: 0 0;
-  display: inline-block;
-  height: 80%;
+  display: inline;
+  vertical-align: baseline;
   background-image: linear-gradient(to right,
       var(--color-frost-2) 100%);
   background-repeat: no-repeat;
