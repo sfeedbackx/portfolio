@@ -27,6 +27,6 @@ export class Skills {
     { name: 'GitHub', image: 'github.png', alt: 'github', size: 'w-7 h-7' , hoverColor:"linux-git-filter"},
     { name: 'Tailwind', image: 'Tailwind.png', alt: 'Tailwind', size: 'w-7 h-7',hoverColor:"tailwind-filter" },
     { name: 'MongoDB', image: 'mongoDB.png', alt: 'mongoDB', size: 'w-7 h-7',hoverColor:"mongodb-filter" },
-    { name: 'PostgreSQL', image: 'postgresql.png', alt: 'postgresSQL', size: 'w-7 h-7', hoverColor:"postgress-filter" }
+    { name: 'PostgreSQL', image: 'postgresql.png', alt: 'postgresSQL', size: 'w-7 h-7', hoverColor:"postgresql-filter" }
   ];
 }

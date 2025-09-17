@@ -17,6 +17,9 @@ export class ProfileInfo {
     },0)
     console.log(ProfileInfo.isHovered)
   }
+  getStatus(){
+    return ProfileInfo.isHovered()
+  }
 
 
 }
