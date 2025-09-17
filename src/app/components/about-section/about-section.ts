@@ -1,9 +1,9 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { ProfileInfo } from '../profile-info/profile-info';
 
 @Component({
   selector: 'app-about-section',
-  imports: [ProfileInfo],
+  imports: [],
   templateUrl: './about-section.html',
   styleUrl: './about-section.css'
 })
