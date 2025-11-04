@@ -19,7 +19,6 @@ export class Skills {
     { name: 'Node.js', image: 'node-js.png', alt: 'node-js', size: 'w-7 h-7', hoverColor:"nodejs-filter" },
     { name: 'Spring Boot', image: 'spring-boot.png', alt: 'spring-boot', size: 'w-7 h-7' ,hoverColor:"springboot-filter"},
     { name: 'Express.js', image: 'express-js.png', alt: 'express-js', size: 'w-7 h-7',hoverColor:"expressjs-filter" },
-    { name: 'Angular', image: 'angular.png', alt: 'angular', size: 'w-7 h-7',hoverColor:"angularjs-filter" },
     { name: 'Nest.js', image: 'nest-js.png', alt: 'Nest-js', size: 'w-7 h-7',hoverColor:"nestjs-filter" },
     { name: 'Docker', image: 'docker.png', alt: 'docker', size: 'w-7 h-7',hoverColor:"docker-filter" },
     { name: 'React', image: 'react.png', alt: 'react', size: 'w-7 h-7' , hoverColor:"react-filter"},
