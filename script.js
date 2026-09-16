@@ -37,7 +37,7 @@
   });
 
   var technologies = [
-    { name: "Node.js", image: "node-js.png", alt: "node-js", hoverColor: "nodejs-filter" },
+    { name: "Node.js", image: "public/node-js.png", alt: "node-js", hoverColor: "nodejs-filter" },
     { name: "Spring Boot", image: "spring-boot.png", alt: "spring-boot", hoverColor: "springboot-filter" },
     { name: "Express.js", image: "express-js.png", alt: "express-js", hoverColor: "expressjs-filter" },
     { name: "Nest.js", image: "nest-js.png", alt: "Nest-js", hoverColor: "nestjs-filter" },
@@ -97,6 +97,29 @@
         '<div class="project-desc">' + pro.description + "</div>" +
         "</div>";
       projectsContainer.appendChild(link);
+    });
+  }
+
+  var notesContainer = document.getElementById("notes-container");
+  if (notesContainer && typeof notes !== "undefined") {
+    var pinned = notes.filter(function (n) { return n.pin; }).slice(0, 3);
+    pinned.forEach(function (note) {
+      var wrapper = document.createElement("div");
+      wrapper.className = "notes-card";
+      var link = document.createElement("a");
+      link.href = "notes.html?file=" + note.file;
+      link.className = "notes-card-link";
+      var dateStr = new Date(note.date).toLocaleDateString("en-GB", {
+        year: "numeric", month: "short", day: "numeric"
+      });
+      link.innerHTML =
+        '<div class="note-header">' +
+        '<h3 class="note-name">' + note.title + "</h3>" +
+        "</div>" +
+        '<p class="note-desc">' + note.description + "</p>" +
+        '<span class="notes-date">' + dateStr + "</span>";
+      wrapper.appendChild(link);
+      notesContainer.appendChild(wrapper);
     });
   }
 })();
