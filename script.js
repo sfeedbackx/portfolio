@@ -37,7 +37,7 @@
   });
 
   var technologies = [
-    { name: "Node.js", image: "public/node-js.png", alt: "node-js", hoverColor: "nodejs-filter" },
+    { name: "Node.js", image: "node-js.png", alt: "node-js", hoverColor: "nodejs-filter" },
     { name: "Spring Boot", image: "spring-boot.png", alt: "spring-boot", hoverColor: "springboot-filter" },
     { name: "Express.js", image: "express-js.png", alt: "express-js", hoverColor: "expressjs-filter" },
     { name: "Nest.js", image: "nest-js.png", alt: "Nest-js", hoverColor: "nestjs-filter" },
