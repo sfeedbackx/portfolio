@@ -77,7 +77,9 @@ html, body {
 .main-card {
   background-color: var(--color-polar-night-1);
   font-family: var(--font-jetBrains);
-  width: 100%;
+  width: 82%;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 1rem;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
