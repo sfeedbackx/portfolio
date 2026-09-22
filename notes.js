@@ -1,14 +1,14 @@
-(function () {
+(function() {
   "use strict";
 
   // ---- Markdown fetching & rendering (adapted from md_parser) ----
 
   async function readMarkdown(url) {
     const response = await fetch(url);
-      if (!response.ok) {
-          throw new Error("HTTP error: " + response.status);
-      }
-      return await response.text();
+    if (!response.ok) {
+      throw new Error("HTTP error: " + response.status);
+    }
+    return await response.text();
   }
 
   function slugify(text) {
@@ -33,7 +33,9 @@
     text = text.replace(/!\[([^\]]*)\]\(([^)\s]+)\)/g, '<img src="$2" alt="$1">');
     text = text.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
     text = text.replace(/\*(.+?)\*/g, "<em>$1</em>");
-    text = text.replace(/`([^`]+)`/g, "<code>$1</code>");
+    //this problem with my treeseter nvim
+    var codeRegex = new RegExp("`([^`]+)`", "g");
+    text = text.replace(codeRegex, "<code>$1</code>");
     text = text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
     text = text.replace(/\n/g, "<br>");
     return text;
@@ -44,9 +46,9 @@
     var thead = document.createElement("thead");
     var tbody = document.createElement("tbody");
 
-    var headerCells = lines[0].split("|").filter(function (c) { return c.trim() !== ""; });
+    var headerCells = lines[0].split("|").filter(function(c) { return c.trim() !== ""; });
     var tr_h = document.createElement("tr");
-    headerCells.forEach(function (cell) {
+    headerCells.forEach(function(cell) {
       var th = document.createElement("th");
       th.innerHTML = parseInline(cell.trim());
       tr_h.appendChild(th);
@@ -56,9 +58,9 @@
     var startRow = lines[1].match(/^[\s|:-]+$/) ? 2 : 1;
 
     for (var r = startRow; r < lines.length; r++) {
-      var cells = lines[r].split("|").filter(function (c) { return c.trim() !== ""; });
+      var cells = lines[r].split("|").filter(function(c) { return c.trim() !== ""; });
       var tr = document.createElement("tr");
-      cells.forEach(function (cell) {
+      cells.forEach(function(cell) {
         var td = document.createElement("td");
         td.innerHTML = parseInline(cell.trim());
         tr.appendChild(td);
@@ -77,11 +79,11 @@
 
     while (i < lines.length) {
       var line = lines[i];
-
-      if (line.match(/^```/)) {
+var fenceWithLang = new RegExp("^```");
+      if (line.match(fenceWithLang)) {
         var codeLines = [];
         i++;
-        while (i < lines.length && !lines[i].match(/^```/)) {
+        while (i < lines.length && !lines[i].match(fenceWithLang)) {
           codeLines.push(lines[i]);
           i++;
         }
@@ -165,7 +167,7 @@
       while (i < lines.length &&
         lines[i].trim() !== "" &&
         !lines[i].match(/^#{1,6}\s/) &&
-        !lines[i].match(/^```/) &&
+        !lines[i].match(fenceWithLang) &&
         !lines[i].match(/^[-*+]\s/) &&
         !lines[i].match(/^\d+\.\s/) &&
         !lines[i].match(/^>\s/) &&
@@ -211,7 +213,7 @@
   }
 
   function renderGrid(container) {
-    notes.forEach(function (note) {
+    notes.forEach(function(note) {
       container.appendChild(buildNoteCard(note));
     });
   }
@@ -236,10 +238,10 @@
     article.className = "note-content";
     article.innerHTML = '<p class="about-text">Loading…</p>';
     container.appendChild(article);
-    readMarkdown(mdFile).then(function (text) {
+    readMarkdown(mdFile).then(function(text) {
       article.innerHTML = "";
       processMd(text, article);
-    }).catch(function (err) {
+    }).catch(function(err) {
       article.innerHTML = '<p class="about-text">Failed to load note: ' + err + "</p>";
     });
   }

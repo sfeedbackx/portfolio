@@ -1,10 +1,10 @@
-(function () {
+(function() {
   "use strict";
 
   var isHovered = null;
 
   function toggleHover() {
-    setTimeout(function () {
+    setTimeout(function() {
       isHovered = !isHovered;
       applyHighlightState();
     }, 200);
@@ -20,7 +20,7 @@
         picCard.classList.remove("pic_card");
       }
     }
-    highlights.forEach(function (el) {
+    highlights.forEach(function(el) {
       el.classList.remove("highlight", "highlight-left");
       if (isHovered === true) {
         el.classList.add("highlight-left");
@@ -31,7 +31,7 @@
   }
 
   var hoverables = document.querySelectorAll("[data-hoverable]");
-  hoverables.forEach(function (el) {
+  hoverables.forEach(function(el) {
     el.addEventListener("mouseenter", toggleHover);
     el.addEventListener("mouseleave", toggleHover);
   });
@@ -44,7 +44,6 @@
     { name: "Docker", image: "docker.png", alt: "docker", hoverColor: "docker-filter" },
     { name: "React", image: "react.png", alt: "react", hoverColor: "react-filter" },
     { name: "Linux", image: "linux-logo.png", alt: "linux", hoverColor: "linux-git-filter" },
-    { name: "GitHub", image: "github.png", alt: "github", hoverColor: "linux-git-filter" },
     { name: "Tailwind", image: "tailwind.png", alt: "Tailwind", hoverColor: "tailwind-filter" },
     { name: "MongoDB", image: "mongoDB.png", alt: "mongoDB", hoverColor: "mongodb-filter" },
     { name: "PostgreSQL", image: "postgresql.png", alt: "postgresSQL", hoverColor: "postgresql-filter" },
@@ -52,7 +51,7 @@
 
   var skillsContainer = document.getElementById("skills-container");
   if (skillsContainer) {
-    technologies.forEach(function (tech) {
+    technologies.forEach(function(tech) {
       var card = document.createElement("div");
       card.className = "skill-card " + (tech.hoverColor || "");
       card.innerHTML =
@@ -65,18 +64,18 @@
 
   var projects = [
     {
-      name: "livrili",
-      img: "livrili.png",
-      alt: "livrili",
-      description: "A platform for clients and couriers to manage packages, offers and reviews.",
-      link: "https://github.com/sfeedbackx/livrili",
+      name: "email-gen",
+      img: "email-gen.png",
+      alt: "email-gen",
+      description: "A local AI tool that uses Ollama to draft and manage email replies.",
+      link: "https://github.com/sfeedbackx/email-gen",
     },
     {
-      name: "ichat",
-      img: "ichat.png",
-      alt: "ichat",
-      description: "An app for real-time conversations with sign-in and online status.",
-      link: "https://github.com/sfeedbackx/Chat-app",
+      name: "voice-typer",
+      img: "transcript.png",
+      alt: "voice-typer",
+      description: "Speech-to-text desktop app with real-time audio visualization.",
+      link: "https://github.com/sfeedbackx/voice-typer",
     },
   ];
 
@@ -86,7 +85,7 @@
 
   var projectsContainer = document.getElementById("projects-container");
   if (projectsContainer) {
-    projects.forEach(function (pro) {
+    projects.forEach(function(pro) {
       var link = document.createElement("a");
       link.href = pro.link;
       link.target = "_blank";
@@ -102,8 +101,8 @@
 
   var notesContainer = document.getElementById("notes-container");
   if (notesContainer && typeof notes !== "undefined") {
-    var pinned = notes.filter(function (n) { return n.pin; }).slice(0, 3);
-    pinned.forEach(function (note) {
+    var pinned = notes.filter(function(n) { return n.pin; }).slice(0, 3);
+    pinned.forEach(function(note) {
       var wrapper = document.createElement("div");
       wrapper.className = "notes-card";
       var link = document.createElement("a");
