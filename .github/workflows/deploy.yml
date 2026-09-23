@@ -19,8 +19,8 @@ jobs:
       - name: Prepare static site
         run: |
           mkdir -p deploy
-          cp index.html styles.css script.js notes.html notes.js notes-data.js deploy/
-          cp public/* deploy/
+          cp index.html styles.css rest.css script.js notes.html notes.js notes-data.js deploy/
+          cp -r public deploy/public
           cp -r md deploy/md
           touch deploy/.nojekyll
 
