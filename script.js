@@ -36,6 +36,8 @@
     el.addEventListener("mouseleave", toggleHover);
   });
 
+  var ASSETS = "public/";
+
   var technologies = [
     { name: "Node.js", image: "node-js.png", alt: "node-js", hoverColor: "nodejs-filter" },
     { name: "Spring Boot", image: "spring-boot.png", alt: "spring-boot", hoverColor: "springboot-filter" },
@@ -55,7 +57,7 @@
       var card = document.createElement("div");
       card.className = "skill-card " + (tech.hoverColor || "");
       card.innerHTML =
-        '<img src="' + tech.image + '" alt="' + tech.alt +
+        '<img src="' + ASSETS + tech.image + '" alt="' + tech.alt +
         '" class="skill-img snow-filter">' +
         '<div class="skill-name">' + tech.name + "</div>";
       skillsContainer.appendChild(card);
@@ -91,7 +93,7 @@
       link.target = "_blank";
       link.innerHTML =
         '<div class="project-card">' +
-        '<img src="' + pro.img + '" alt="' + pro.alt + '" class="project-img">' +
+        '<img src="' + ASSETS + pro.img + '" alt="' + pro.alt + '" class="project-img">' +
         '<div class="project-name">' + capitalizeFirstLetter(pro.name) + "</div>" +
         '<div class="project-desc">' + pro.description + "</div>" +
         "</div>";
